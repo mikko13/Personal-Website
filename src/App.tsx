@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from "./components/navbarComponent/Navbar";
+import Main from "./components/mainPage/Main";
+import Skills from "./components/skillsPage/Skills";
+import Background from "./components/backgroundComponents/Background";
+import About from "./components/aboutPage/About";
+import Projects from "./components/projectsPage/Projects";
+import Contact from "./components/contactPage/Contact";
+import Footer from "./components/footerComponent/Footer"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+const globalStyles = `
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-export default App
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+`;
+
+function App() {
+  return (
+    <div className="min-h-screen relative overflow-hidden">
+      <style>{globalStyles}</style>
+      <Background />
+      <div className="relative z-10">
+        <Navbar />
+        <Main />
+        <Skills />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </div>
+  );
+}
+
+export default App;
