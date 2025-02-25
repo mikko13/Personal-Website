@@ -4,11 +4,11 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactInfoList: React.FC = () => {
   return (
-    <div className="space-y-6 p-4 sm:p-6">
+    <div className="space-y-6">
       <ContactInfo
         icon={<Mail />}
         title="Email"
-        content="mikkosamaniego.13@gmail.com"
+        content="mikkosamaniego.13"
         link="mailto:mikkosamaniego.13@gmail.com"
       />
       <ContactInfo
