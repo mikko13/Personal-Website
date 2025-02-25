@@ -26,7 +26,7 @@ const FooterContent: React.FC = () => {
         <div className="mb-8 md:mb-0">
           <h2 className="text-2xl font-bold mb-4">Mikko L. Samaniego</h2>
           <p className="max-w-md text-gray-200">
-            Creating innovative solutions for tomorrow's challenges. Our mission
+            Creating innovative solutions for tomorrow's challenges. My mission
             is to build technology that makes a difference in people's lives.
           </p>
         </div>
