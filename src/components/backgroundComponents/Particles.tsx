@@ -44,7 +44,7 @@ const Particles: React.FC<ParticlesProps> = ({ canvas }) => {
     const connectParticles = (
       ctx: CanvasRenderingContext2D,
       particles: Particle[],
-      canvas: HTMLCanvasElement
+      _canvas: HTMLCanvasElement // This prevents TypeScript from complaining
     ) => {
       const maxDistance = 100;
 
