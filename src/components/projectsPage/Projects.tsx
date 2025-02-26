@@ -5,10 +5,10 @@ import FilterButton from "./FilterButton";
 import projects from "./ProjectsData";
 
 const Projects: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [activeFilter, setActiveFilter] = useState<string>("All");
 
   const filteredProjects =
-    activeFilter === "all"
+    activeFilter === "All"
       ? projects
       : projects.filter((project) => project.tags.includes(activeFilter));
 
@@ -24,9 +24,8 @@ const Projects: React.FC = () => {
         </p>
       </div>
 
-      {/* Filter Buttons */}
       <div className="flex justify-center flex-wrap gap-2 mb-10">
-        {["all", "frontend", "backend", "database", "Non-IT Related"].map(
+        {["All", "Frontend", "Backend", "Database", "Non-IT Related"].map(
           (filter) => (
             <FilterButton
               key={filter}
@@ -38,10 +37,8 @@ const Projects: React.FC = () => {
         )}
       </div>
 
-      {/* Project List */}
       <ProjectList projects={filteredProjects} />
 
-      {/* GitHub Link */}
       <div className="text-center mt-12">
         <p className="text-gray-600 mb-4">Want to see more of my work?</p>
         <a
