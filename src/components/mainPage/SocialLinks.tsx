@@ -3,7 +3,7 @@ import { Github, Linkedin, Facebook, Instagram } from "lucide-react";
 
 const SocialLinks: React.FC = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 justify-center items-center md:justify-start">
       <a
         href="https://github.com/mikko13"
         className="text-gray-600 hover:text-teal-800 transition-colors"

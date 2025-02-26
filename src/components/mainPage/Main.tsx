@@ -35,7 +35,6 @@ const Main: React.FC = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight bg-gradient-to-r from-teal-800 to-blue-600 bg-clip-text text-transparent">
             Hi, I'm Mikko
           </h1>
-
           <RoleTyping roles={roles} />
 
           <div className="flex justify-center md:hidden mb-10 mt-[-70px] ">
@@ -48,7 +47,7 @@ const Main: React.FC = () => {
             performance, accessibility, and exceptional user experiences.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row gap-4 mb-10 justify-center md:justify-start">
             <a
               href="#projects"
               onClick={(e) => handleSmoothScroll(e, "#projects")}
