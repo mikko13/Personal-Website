@@ -27,7 +27,7 @@ const Main: React.FC = () => {
   return (
     <div className="px-6 py-10 md:py-28 max-w-4xl mx-auto">
       <div className="flex flex-col md:flex-row items-start justify-between">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl text-center md:text-left">
           <div className="inline-block px-3 py-1 mb-6 bg-teal-100 text-teal-800 rounded-full text-sm font-medium">
             Available for new projects
           </div>
@@ -37,6 +37,10 @@ const Main: React.FC = () => {
           </h1>
 
           <RoleTyping roles={roles} />
+
+          <div className="flex justify-center md:hidden mb-10 mt-[-70px] ">
+            <ProfileImage />
+          </div>
 
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             Transforming ideas into elegant, functional digital solutions. I
@@ -64,7 +68,9 @@ const Main: React.FC = () => {
           <SocialLinks />
         </div>
 
-        <ProfileImage />
+        <div className="hidden md:block">
+          <ProfileImage />
+        </div>
       </div>
     </div>
   );

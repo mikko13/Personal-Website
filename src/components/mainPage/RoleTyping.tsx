@@ -31,7 +31,7 @@ const RoleTyping: React.FC<RoleTypingProps> = ({ roles }) => {
 
   return (
     <div className="relative h-16 mb-8">
-      <p className="text-2xl md:text-3xl text-gray-700 font-medium absolute transition-opacity duration-500">
+      <p className="ml-4 text-2xl md:text-3xl text-gray-700 font-medium absolute transition-opacity duration-500">
         I am a <span className="text-teal-700 font-bold">{currentRole}</span>
         <span className="animate-blink">|</span>
       </p>
