@@ -4,6 +4,8 @@ import motion2024 from "../.././assets/motion2024.jpg";
 import esumbong from "../.././assets/esumbong.png";
 import hiccup from "../.././assets/hiccup.png";
 import placeholder from "../.././assets/placeholder.webp"
+import personalwebsite from "../.././assets/personalwebsite.png"
+import glspayroll from "../.././assets/glspayroll.png"
 
 const projects = [
   {
@@ -22,7 +24,7 @@ const projects = [
     title: "Personal Portfolio Website",
     description:
       "A sleek and professional Personal Portfolio Website showcasing skills, projects, and experience, designed to leave a lasting impression.",
-    image: placeholder,
+    image: personalwebsite,
     tags: ["Frontend"],
     technologies: ["ReactJS + Vite", "TailwindCSS", "Typescript"],
     repoLink: "https://github.com/mikko13/Personal-Website",
@@ -75,7 +77,7 @@ const projects = [
     title: "Payroll Management System for GLS Manpower Services",
     description:
       "A Python-based application designed to streamline employee salary processing. It enables efficient payroll management with features for employee data handling, salary computation, and automated payroll generation. The system ensures accuracy, reduces manual workload, and generates payroll reports for seamless financial management.",
-    image: placeholder,
+    image: glspayroll,
     tags: ["Backend"],
     technologies: ["Python"],
     repoLink: "https://github.com/mikko13/gls",
