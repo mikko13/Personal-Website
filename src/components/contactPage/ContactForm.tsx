@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Send, Loader } from "lucide-react";
+import emailjs from "@emailjs/browser";
+emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
 
 const ContactForm: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -21,34 +23,57 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formState.name,
+          reply_to: formState.email,
+          subject: formState.subject,
+          message: formState.message,
+        },
+        import.meta.env.VITE_EMAILJS_USER_ID
+      );
+
+      if (result.text === "OK") {
+        setFormMessage({
+          text: "Thank you! Your message has been sent successfully.",
+          type: "success",
+        });
+
+        setFormState({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+
+        setTimeout(() => {
+          setFormMessage({ text: "", type: "" });
+        }, 20000);
+      } else {
+        throw new Error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("EmailJS error:", error);
       setFormMessage({
-        text: "Thank you! Your message has been sent successfully.",
-        type: "success",
+        text: "Failed to send your message. Please try again later.",
+        type: "error",
       });
-
-      setFormState({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-
-      setTimeout(() => {
-        setFormMessage({ text: "", type: "" });
-      }, 5000);
-    }, 1500);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-[#eff8ff] bg-[-webkit-radial-gradient(circle,_#eff8ff_0%,_#ffffff_100%)] bg-[radial-gradient(circle,_#eff8ff_0%,_#ffffff_100%)] rounded-xl shadow-md p-6 border border-gray-100"
+      className="bg-white rounded-xl shadow-md p-6 border border-gray-100"
     >
       <h3 className="text-2xl font-bold text-teal-800 mb-6">Send a Message</h3>
 

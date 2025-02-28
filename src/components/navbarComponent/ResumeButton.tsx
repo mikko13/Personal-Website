@@ -1,5 +1,6 @@
 import React from "react";
-import Resume from "../../assets/resume.pdf"
+import Resume from "../../assets/resume.pdf";
+import { FileUser } from "lucide-react";
 
 const ResumeButton: React.FC = () => {
   const handleDownload = () => {
@@ -15,9 +16,14 @@ const ResumeButton: React.FC = () => {
   return (
     <button
       onClick={handleDownload}
-      className="bg-teal-800 text-white px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors shadow-md cursor-pointer"
+      className="bg-teal-800 text-white px-3 py-2 rounded-lg hover:bg-teal-700 transition-colors shadow-md cursor-pointer"
     >
-      Resume
+      <div className="flex gap-2">
+        <div>
+          <FileUser size={24} />
+        </div>
+        <div>Résumé</div>
+      </div>
     </button>
   );
 };
