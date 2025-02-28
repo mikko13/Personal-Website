@@ -9,7 +9,7 @@ const NavLogo: React.FC = () => {
         <div className="absolute inset-4 bg-teal-600 rounded-sm transform rotate-45"></div>
       </div>
       <span className="ml-3 text-xl font-bold bg-gradient-to-r from-teal-800 to-teal-600 bg-clip-text text-transparent">
-        MLS.dev
+        MLS
       </span>
     </div>
   );
