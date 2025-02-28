@@ -12,8 +12,18 @@ const Canvas: React.FC<CanvasProps> = ({ onCanvasReady }) => {
     if (!canvas) return;
 
     const setCanvasDimensions = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const devicePixelRatio = window.devicePixelRatio || 1;
+
+      canvas.style.width = `${window.innerWidth}px`;
+      canvas.style.height = `${window.innerHeight}px`;
+
+      canvas.width = window.innerWidth * devicePixelRatio;
+      canvas.height = window.innerHeight * devicePixelRatio;
+
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        ctx.scale(devicePixelRatio, devicePixelRatio);
+      }
     };
 
     setCanvasDimensions();

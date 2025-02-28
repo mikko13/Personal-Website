@@ -79,7 +79,7 @@ const projects = [
       "A Python-based application designed to streamline employee salary processing. It enables efficient payroll management with features for employee data handling, salary computation, and automated payroll generation. The system ensures accuracy, reduces manual workload, and generates payroll reports for seamless financial management.",
     image: glspayroll,
     tags: ["Backend"],
-    technologies: ["Python"],
+    technologies: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Vite", "TailwindCSS", "Typescript"],
     repoLink: "https://github.com/mikko13/gls",
     icon: <Code size={24} />,
   },
