@@ -164,7 +164,7 @@ const ContactForm: React.FC = () => {
 
       <button
         type="submit"
-        className="w-full bg-teal-800 text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-teal-700 transition-colors shadow-md disabled:bg-teal-300"
+        className="w-full bg-teal-800 text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-teal-700 transition-colors shadow-md disabled:bg-teal-300 cursor-pointer"
         disabled={isSubmitting}
       >
         {isSubmitting ? (
