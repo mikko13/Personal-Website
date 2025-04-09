@@ -1,10 +1,7 @@
 import { Layout, Star, Code } from "lucide-react";
 import spilltheitea from "../.././assets/spilltheitea.png";
 import motion2024 from "../.././assets/motion2024.jpg";
-import esumbong from "../.././assets/esumbong.png";
-import hiccup from "../.././assets/hiccup.png";
 import placeholder from "../.././assets/placeholder.webp";
-import personalwebsite from "../.././assets/personalwebsite.png";
 import glspayroll from "../.././assets/glspayroll.png";
 
 const projects = [
