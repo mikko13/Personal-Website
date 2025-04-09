@@ -1,9 +1,9 @@
 {
-  "name": "personal-website",
+  "name": "mikkosamaniego",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mikko13.github.io/Personal-Website",
+  "homepage": "https://mikko13.github.io/mikkosamaniego",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
