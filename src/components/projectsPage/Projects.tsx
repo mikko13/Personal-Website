@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
 
       <FadeInSection delay={100}>
         <div className="flex justify-center flex-wrap gap-2 mb-10">
-          {["All", "Frontend", "Backend", "Database", "Non-IT Related"].map(
+          {["All", "Software Development", "Non-IT Related"].map(
             (filter) => (
               <FilterButton
                 key={filter}
