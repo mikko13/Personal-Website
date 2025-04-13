@@ -3,6 +3,7 @@ import spilltheitea from "../.././assets/spilltheitea.png";
 import motion2024 from "../.././assets/motion2024.jpg";
 import placeholder from "../.././assets/placeholder.webp";
 import glspayroll from "../.././assets/glspayroll.png";
+import tigercookiesmnl from "../.././assets/tigercookiesmnl.png";
 
 const projects = [
   {
@@ -10,7 +11,7 @@ const projects = [
     title: "Unified Attendance and Salary Computation for Tiger Cookies MNL",
     description:
       "This streamlines attendance tracking and salary computation, ensuring efficient workforce management for bake shops. Automate payroll, track employee hours, and simplify operations—all in one system.",
-    image: placeholder,
+    image: tigercookiesmnl,
     tags: ["Software Development"],
     technologies: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "TailwindCSS"],
     repoLink: "https://github.com/mikko13/TigerCookiesMNL",
