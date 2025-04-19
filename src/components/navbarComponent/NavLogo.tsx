@@ -1,4 +1,3 @@
-import React from "react";
 import { Code, Terminal } from "lucide-react";
 
 const NavLogo = () => {

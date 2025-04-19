@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Code, Terminal } from "lucide-react";
 import "./Loader.css";
 
