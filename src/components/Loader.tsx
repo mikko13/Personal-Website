@@ -1,38 +1,96 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Code, Terminal } from "lucide-react";
 
 export default function Loader() {
-  const [phase, setPhase] = useState(0);
-
+  const [stage, setStage] = useState(0);
+  
   useEffect(() => {
-    const timer1 = setTimeout(() => setPhase(1), 600);
-    const timer2 = setTimeout(() => setPhase(2), 1200);
-    const timer3 = setTimeout(() => setPhase(3), 1800);
-
+    // Sequence of animation stages
+    const timer1 = setTimeout(() => setStage(1), 300);  // Container appears
+    const timer2 = setTimeout(() => setStage(2), 800);  // Background glow effect
+    const timer3 = setTimeout(() => setStage(3), 1200); // Icons appear
+    const timer4 = setTimeout(() => setStage(4), 1600); // Start continuous animations
+    
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
+      clearTimeout(timer4);
     };
   }, []);
 
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="relative">
-        <div
-          className={`w-32 h-32 bg-teal-800 rounded-lg transform rotate-45 transition-all duration-700 ease-in-out
-            ${phase >= 1 ? "scale-100" : "scale-0"}`}
-        ></div>
-
-        <div
-          className={`absolute top-1/2 left-1/2 w-24 h-24 bg-[#edf2fc] rounded-lg transform -translate-x-1/2 -translate-y-1/2 rotate-45 transition-all duration-700 ease-in-out delay-100
-            ${phase >= 2 ? "scale-100" : "scale-0"}`}
-        ></div>
-
-        <div
-          className={`absolute top-1/2 left-1/2 w-6 h-6 bg-teal-500 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out delay-200
-            ${phase >= 3 ? "scale-100 pulse-animation" : "scale-0"}`}
-        ></div>
+      <div className="flex flex-col items-center">
+        {/* Container with advanced animation */}
+        <div 
+          className={`relative h-24 w-24 flex items-center justify-center
+            bg-gradient-to-br from-teal-600 to-teal-800 rounded-[200px] overflow-hidden shadow-lg
+            transition-all duration-700
+            ${stage >= 1 ? "scale-100 opacity-100" : "scale-0 opacity-0"}
+            ${stage >= 4 ? "animate-pulse" : ""}`}
+        >
+          {/* Top light reflection */}
+          <div className="absolute opacity-20 top-0 left-0 right-0 h-1/2 bg-white rounded-t-md"></div>
+          
+          {/* Animated glow effect */}
+          <div 
+            className={`absolute inset-0 bg-teal-400 rounded-md filter blur-xl
+              transition-all duration-1000
+              ${stage >= 2 ? "opacity-30" : "opacity-0"}
+              ${stage >= 4 ? "animate-ping opacity-20" : ""}`}
+          ></div>
+          
+          {/* Background Code icon */}
+          <Code 
+            className={`text-teal-100 absolute w-12 h-12
+              transition-all duration-500 delay-100
+              ${stage >= 3 ? "opacity-20" : "opacity-0"}
+              ${stage >= 4 ? "animate-spin-slow" : ""}`}
+            style={{ animationDuration: '8s' }}
+          />
+          
+          <Terminal 
+            className={`text-teal-100 w-10 h-10 z-10
+              transition-all duration-500 delay-200
+              ${stage >= 3 ? "opacity-100 scale-100" : "opacity-0 scale-0"}
+              ${stage >= 4 ? "animate-bounce-subtle" : ""}`}
+            strokeWidth={2.5} 
+          />
+        </div>
+        
       </div>
+      
+      <style jsx>{`
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        @keyframes bounce-subtle {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-2px); }
+        }
+        
+        @keyframes dots {
+          0%, 20% { content: "."; }
+          40%, 60% { content: ".."; }
+          80%, 100% { content: "..."; }
+        }
+        
+        .animate-spin-slow {
+          animation: spin-slow 8s linear infinite;
+        }
+        
+        .animate-bounce-subtle {
+          animation: bounce-subtle 1.5s ease-in-out infinite;
+        }
+        
+        .animate-dots:after {
+          content: "...";
+          animation: dots 1.5s infinite steps(1);
+        }
+      `}</style>
     </div>
   );
 }
