@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Code, Terminal } from "lucide-react";
 import "./Loader.css";
 
 export default function Loader() {
-  const [stage, setStage] = useState(0);
+  const [, setStage] = useState(0);
 
   useEffect(() => {
     const timer1 = setTimeout(() => setStage(1), 300); // Container appears
