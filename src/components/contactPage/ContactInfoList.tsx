@@ -8,8 +8,8 @@ const ContactInfoList: React.FC = () => {
       <ContactInfo
         icon={<Mail />}
         title="Email"
-        content="mikkosamaniego.13"
-        link="mailto:mikkosamaniego.13@gmail.com"
+        content="samaniegomikko"
+        link="mailto:samaniegomikko@gmail.com"
       />
       <ContactInfo
         icon={<Phone />}
