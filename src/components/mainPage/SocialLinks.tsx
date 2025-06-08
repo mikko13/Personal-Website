@@ -11,7 +11,7 @@ const SocialLinks: React.FC = () => {
         <Github size={24} />
       </a>
       <a
-        href="www.linkedin.com/in/mikkosamaniego"
+        href="https://www.linkedin.com/in/mikkosamaniego"
         className="text-gray-600 hover:text-teal-800 transition-colors"
       >
         <Linkedin size={24} />
