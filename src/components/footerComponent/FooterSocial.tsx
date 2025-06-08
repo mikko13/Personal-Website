@@ -26,7 +26,7 @@ const FooterSocial: React.FC = () => {
         <Instagram size={20} />
       </a>
       <a
-        href="https://www.linkedin.com/in/mikko-s-0253902b7/"
+        href="www.linkedin.com/in/mikkosamaniego"
         className="hover:text-teal-300 transition"
         aria-label="LinkedIn"
       >
