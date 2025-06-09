@@ -7,10 +7,10 @@ import FadeInSection from "../fadeinComponents/FadeIn";
 
 const Main: React.FC = () => {
   const roles = [
+    "Junior IT Student",
     "Software Engineer",
     "Full-Stack Developer",
-    "UI/UX Enthusiast",
-    "3rd Year IT Student",
+    "AI Enthusiast",
   ];
 
   const handleSmoothScroll = (
