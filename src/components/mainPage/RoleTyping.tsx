@@ -29,10 +29,15 @@ const RoleTyping: React.FC<RoleTypingProps> = ({ roles }) => {
     return () => clearTimeout(typingTimeout);
   }, [charIndex, isDeleting, roleIndex, roles]);
 
+  const getArticle = (role: string) => {
+    return role.startsWith("AI") ? "an" : "a";
+  };
+
   return (
     <div className="relative h-16 mb-8 flex justify-center items-center md:block w-full">
       <p className="text-2xl md:text-3xl text-gray-700 font-medium absolute transition-opacity duration-500">
-        I am a <span className="text-teal-700 font-bold">{currentRole}</span>
+        I am {getArticle(roles[roleIndex])}{" "}
+        <span className="text-teal-700 font-bold">{currentRole}</span>
         <span className="animate-blink">|</span>
       </p>
     </div>
