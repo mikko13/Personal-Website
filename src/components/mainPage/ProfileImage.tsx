@@ -1,6 +1,6 @@
 import React from "react";
 import { Code, Briefcase } from "lucide-react";
-import ProfilePicture from "../../assets/profilepic2.png";
+import ProfilePicture from "../../assets/profilePic2.png";
 
 const ProfileImage: React.FC = () => {
   return (
