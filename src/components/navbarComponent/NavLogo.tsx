@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "../../assets/logo.png"
+import Logo from "../../assets/logo2.png"
 
 const NavLogo = () => {
   const [hovered, setHovered] = useState(false);
