@@ -52,7 +52,7 @@ const projects = [
       "TailwindCSS",
       "Typescript",
     ],
-    repoLink: "https://github.com/mikko13/gls",
+    repoLink: "https://github.com/mikko13/GLS-Payroll-Management-System",
     icon: <Code size={24} />,
   },
 ];
