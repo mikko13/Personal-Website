@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "../../assets/resume.pdf";
+import Resume from "../../assets/Resume.pdf";
 import { FileUser } from "lucide-react";
 
 const ResumeButton: React.FC = () => {
@@ -7,7 +7,7 @@ const ResumeButton: React.FC = () => {
     const pdfUrl = Resume;
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "resume.pdf";
+    link.download = "Samaniego_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
