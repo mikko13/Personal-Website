@@ -76,7 +76,7 @@ const AboutGrid: React.FC = () => {
           <ul className="space-y-3 text-gray-600">
             <li className="flex items-start">
               <div className="min-w-4 h-4 bg-teal-200 rounded-full mt-1.5 mr-3"></div>
-              <p>Dean's Lister, 2022-2024</p>
+              <p>Dean's Lister, 2022-2025</p>
             </li>
           </ul>
         }

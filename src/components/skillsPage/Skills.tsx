@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
           <SkillCard
             icon={<Layout />}
             title="Frontend Development"
-            skills={["ReactJS", "TypeScript", "Tailwind CSS", "AngularJS"]}
+            skills={["ReactJS", "TypeScript", "Tailwind CSS", "AngularJS", "VueJS"]}
             description="Creating responsive, accessible, and performant user interfaces with modern frameworks and tools."
           />
         </FadeInSection>
@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
           <SkillCard
             icon={<Server />}
             title="Backend Development"
-            skills={["Java", "C#", "PHP", "ExpressJS", "ASP.NET", "MVC"]}
+            skills={["Java", "Python", "C#", "PHP", "ExpressJS", "ASP.NET", "MVC", "C++"]}
             description="Building robust server-side applications and APIs that power seamless user experiences."
           />
         </FadeInSection>

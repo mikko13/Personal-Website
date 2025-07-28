@@ -7,7 +7,7 @@ import FadeInSection from "../fadeinComponents/FadeIn";
 
 const Main: React.FC = () => {
   const roles = [
-    "Junior IT Student",
+    "Senior IT Student",
     "Software Engineer",
     "Full-Stack Developer",
     "AI Enthusiast",
