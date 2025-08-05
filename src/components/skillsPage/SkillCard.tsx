@@ -18,7 +18,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ icon, title, skills, description 
 
       <p className="text-gray-600 mb-4">{description}</p>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 cursor-pointer">
         {skills.map((skill, index) => (
           <span
             key={index}
