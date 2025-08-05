@@ -49,7 +49,7 @@ const ContactInfoList: React.FC = () => {
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/mikko-s-0253902b7/"
+            href="https://www.linkedin.com/in/mikkosamaniego/"
             className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors"
             aria-label="LinkedIn"
           >
